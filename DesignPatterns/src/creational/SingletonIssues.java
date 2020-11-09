@@ -103,3 +103,28 @@ class DestroySingleton{
 		}
 	}
 }
+
+/**
+ * Overcome Cloning issue
+ * @author avyas27
+ *
+ */
+class CloneSingleton{
+	private static CloneSingleton instance;
+
+	private CloneSingleton() {}
+
+	public static CloneSingleton getInstance() {
+		if(instance == null) {
+			instance = new CloneSingleton();
+		}
+		return instance;
+	}
+	
+	@Override
+	public Object clone() {
+		return instance;
+		//OR 
+		//throw new CloneNotSupportedException();
+	}
+}

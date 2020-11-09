@@ -8,6 +8,7 @@ public class Singleton {
 		
 		// ALL the classes would be public. Its avoided here for example purpose as public class reuires new file.
 
+		//java.lang.Runtime#getRuntime()
 	}
 }
 
